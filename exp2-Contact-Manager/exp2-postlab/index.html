@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Filter Application</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        .input-group {
+            margin: 20px 0;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+        input {
+            padding: 8px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            width: 200px;
+        }
+        button {
+            padding: 8px 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .output {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-left: 4px solid #4CAF50;
+        }
+        .info {
+            color: #666;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Product Filter Application</h1>
+        <p class="info">Open the browser console (F12) to see the product details and filtered results.</p>
+        
+        <div class="input-group">
+            <label for="priceInput">Enter Minimum Price:</label>
+            <input type="number" id="priceInput" placeholder="e.g., 300" min="0">
+            <button onclick="filterAndDisplay()">Filter Products</button>
+        </div>
+        
+        <div class="output">
+            <h3>Instructions:</h3>
+            <ul>
+                <li>All products are displayed in the console on page load</li>
+                <li>Enter a minimum price value and click "Filter Products" to see filtered results</li>
+                <li>Check the browser console (F12 or Dev Tools) for output</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        
+        const products = [
+            {
+                id: 1,
+                name: "Laptop",
+                price: 1200,
+                category: "Electronics",
+                stock: 5
+            },
+            {
+                id: 2,
+                name: "Mouse",
+                price: 25,
+                category: "Electronics",
+                stock: 150
+            },
+            {
+                id: 3,
+                name: "Keyboard",
+                price: 75,
+                category: "Electronics",
+                stock: 80
+            },
+            {
+                id: 4,
+                name: "Monitor",
+                price: 350,
+                category: "Electronics",
+                stock: 12
+            },
+            {
+                id: 5,
+                name: "Headphones",
+                price: 150,
+                category: "Electronics",
+                stock: 45
+            },
+            {
+                id: 6,
+                name: "Desk Lamp",
+                price: 45,
+                category: "Accessories",
+                stock: 30
+            },
+            {
+                id: 7,
+                name: "USB Cable",
+                price: 10,
+                category: "Accessories",
+                stock: 200
+            },
+            {
+                id: 8,
+                name: "Mechanical Keyboard",
+                price: 250,
+                category: "Electronics",
+                stock: 25
+            },
+            {
+                id: 9,
+                name: "Webcam",
+                price: 80,
+                category: "Electronics",
+                stock: 35
+            },
+            {
+                id: 10,
+                name: "External Hard Drive",
+                price: 120,
+                category: "Storage",
+                stock: 18
+            }
+        ];
+
+        
+        function displayAllProducts() {
+            console.log("========================================");
+            console.log("ALL PRODUCTS");
+            console.log("========================================");
+            products.forEach((product, index) => {
+                console.log(`\n${index + 1}. ${product.name}`);
+                console.log(`   ID: ${product.id}`);
+                console.log(`   Price: $${product.price}`);
+                console.log(`   Category: ${product.category}`);
+                console.log(`   Stock: ${product.stock} units`);
+            });
+            console.log("\n========================================\n");
+        }
+
+        
+        function filterProductsByPrice(minPrice) {
+            return products.filter(product => product.price >= minPrice);
+        }
+
+        
+        function displayFilteredProducts(filteredProducts, minPrice) {
+            console.log("========================================");
+            console.log(`PRODUCTS WITH MINIMUM PRICE: $${minPrice}`);
+            console.log("========================================");
+            
+            if (filteredProducts.length === 0) {
+                console.log("No products found matching the criteria.");
+            } else {
+                console.log(`Found ${filteredProducts.length} product(s):\n`);
+                filteredProducts.forEach((product, index) => {
+                    console.log(`${index + 1}. ${product.name}`);
+                    console.log(`   ID: ${product.id}`);
+                    console.log(`   Price: $${product.price}`);
+                    console.log(`   Category: ${product.category}`);
+                    console.log(`   Stock: ${product.stock} units\n`);
+                });
+            }
+            console.log("========================================\n");
+        }
+
+        
+        function filterAndDisplay() {
+            const priceInput = document.getElementById("priceInput");
+            const minPrice = parseFloat(priceInput.value);
+
+            if (isNaN(minPrice) || minPrice < 0) {
+                console.error("Please enter a valid minimum price value (non-negative number).");
+                alert("Please enter a valid minimum price value!");
+                return;
+            }
+
+            const filteredProducts = filterProductsByPrice(minPrice);
+            displayFilteredProducts(filteredProducts, minPrice);
+        }
+
+        
+        window.addEventListener("DOMContentLoaded", function() {
+            displayAllProducts();
+            console.log("✓ Page loaded! Use the input field above to filter products by minimum price.");
+            console.log("✓ Open the browser console (F12) to see the product information.\n");
+        });
+    </script>
+</body>
+</html>
