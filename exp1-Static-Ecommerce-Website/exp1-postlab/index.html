@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Responsive Layout</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        
+        html, body {
+            height: 100%;
+        }
+        
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        
+        main {
+            flex: 1 0 auto;
+        }
+        
+        footer {
+            flex-shrink: 0;
+        }
+
+        
+        .sidebar {
+            background-color: #f8f9fa;
+            padding: 20px;
+            min-height: 200px;
+        }
+
+        .main-content {
+            padding: 20px;
+        }
+
+        .content-box {
+            background-color: #e9ecef;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">MyWebsite</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    
+    <main class="container my-4">
+        <div class="row">
+            
+            <div class="col-12 col-md-8 main-content">
+                <h1>Main Content</h1>
+                <p>This is the main content area. On medium to large screens (≥768px), this takes up 8 columns. On small screens (&lt;768px), it takes full width.</p>
+                
+                <div class="content-box">
+                    <h3>Article 1</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+                
+                <div class="content-box">
+                    <h3>Article 2</h3>
+                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+                
+                <div class="content-box">
+                    <h3>Article 3</h3>
+                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                </div>
+            </div>
+
+           
+            <div class="col-12 col-md-4 sidebar">
+                <h2>Sidebar</h2>
+                <p>This sidebar appears beside the main content on desktop screens and below it on mobile.</p>
+                
+                <h4>Quick Links</h4>
+                <ul class="list-group">
+                    <li class="list-group-item">Link 1</li>
+                    <li class="list-group-item">Link 2</li>
+                    <li class="list-group-item">Link 3</li>
+                    <li class="list-group-item">Link 4</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+   
+    <footer class="bg-dark text-white py-4 mt-auto">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <h5>About Us</h5>
+                    <p>A responsive Bootstrap layout demonstration.</p>
+                </div>
+                <div class="col-12 col-md-6 text-md-end">
+                    <h5>Contact</h5>
+                    <p>Email: info@example.com</p>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center">
+                <p class="mb-0">&copy; 2026 MyWebsite. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
