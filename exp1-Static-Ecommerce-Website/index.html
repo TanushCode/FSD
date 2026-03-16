@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ecocarry | Simple Smart Bags</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="brand">
+            <h1>Ecocarry</h1>
+            <p>Eco-friendly smart bags that keep travel light.</p>
+        </div>
+        <nav class="site-nav">
+            <a href="#products">Bags</a>
+            <a href="#register">Register</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div>
+                <h2>Travel better with recycled materials.</h2>
+                <p>Our Budget Lineup mixes reused plastic, fibre, and rubber so every trip has a smaller footprint.</p>
+                <button class="primary" data-scroll="products">See the bags</button>
+            </div>
+           
+        </section>
+
+        <section class="filters">
+            <label>
+                <span>Search</span>
+                <input type="text" id="searchInput" placeholder="Search by name">
+            </label>
+            <label>
+                <span>Lineup</span>
+                <select id="lineupSelect">
+                    <option value="all">All</option>
+                    <option value="budget">Budget</option>
+                    <option value="premium">Premium</option>
+                    <option value="travel">Travel</option>
+                </select>
+            </label>
+        </section>
+
+        <section class="products" id="products">
+            <p class="hint"><span data-count>4</span> bags match your search.</p>
+            <div class="product-grid">
+                <article class="product" data-name="Starling" data-lineup="budget" data-price="₹499">
+                    <img src="starling.png" alt="Starling bag">
+                    <h4>Starling</h4>
+                    <p>Solar-ready commuter built with pine fibre.</p>
+                    <strong>₹499</strong>
+                </article>
+                <article class="product" data-name="Rose" data-lineup="budget" data-price="₹399">
+                    <img src="rose.png" alt="Rose bag">
+                    <h4>Rose</h4>
+                    <p>Padded daypack lined with recycled plastic.</p>
+                    <strong>₹399</strong>
+                </article>
+                <article class="product" data-name="Serenity" data-lineup="premium" data-price="₹699">
+                    <img src="serenity.png" alt="Serenity bag">
+                    <h4>Serenity</h4>
+                    <p>Weekend bag with recycled rubber base.</p>
+                    <strong>₹699</strong>
+                </article>
+                <article class="product" data-name="Drift Pack" data-lineup="travel" data-price="₹549">
+                    <img src="serenity.png" alt="Concept drift pack">
+                    <h4>Drift Pack</h4>
+                    <p>Modular travel bag coming soon.</p>
+                    <strong>₹549</strong>
+                </article>
+                <article class="product" data-name="Midnight" data-lineup="premium" data-price="₹649">
+                    <img src=https://www.higift.eu/media/catalog/product/cache/d33d53de59b02e632c4a92d997e1cc6a/M/K/MK20882-000-21.jpg alt="Concept drift pack">
+                    <h4>Compact Backpack</h4>
+                    <strong>₹649</strong>
+            </div>
+        </section>
+
+        <section class="register" id="register">
+            <h3>Register or Log in</h3>
+            <form>
+                <label>Email
+                    <input type="email" placeholder="you@example.com" required>
+                </label>
+                <label>Phone number
+                    <input type="tel" placeholder="(+91) 98765 43210" required>
+                </label>
+                <button type="submit" class="primary">Continue</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer" id="contact">
+        <div>
+            <h4>Contact Us</h4>
+            <p>support@ecocarry.com</p>
+            <p>+91 98765 43210</p>
+        </div>
+        <div class="socials">
+            <a href="#"></a>
+            <a href="#">X</a>
+        </div>
+    </footer>
+
+    <script src="INDEX.JS" defer></script>
+</body>
+</html>
