@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: #333;
+  padding: 30px 15px;
+  background: linear-gradient(to right, #0b78e4, #748f95);
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  background: linear-gradient(to right, #0b78e4, #86c7d5);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 24px;
+  font-size: 1.6rem;
+  color: #2c3e50;
+}
+
+h2 {
+  margin-top: 28px;
+  margin-bottom: 12px;
+  font-size: 1.15rem;
+  color: #34495e;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 6px;
+}
+
+
+.form-group {
+  margin-bottom: 14px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 9px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  transition: border-color 0.2s;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #3498db;
+}
+
+#submit-btn {
+  width: 100%;
+  padding: 10px;
+  background: #071722;
+  color: #ededed;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+#submit-btn:hover {
+  background: #2980b9;
+}
+
+#submit-btn.editing {
+  background: #27ae60;
+}
+
+#submit-btn.editing:hover {
+  background: #219a52;
+}
+
+/* ---- Messages ---- */
+.error {
+  color: #e74c3c;
+  text-align: center;
+  margin-top: 8px;
+  font-size: 0.9rem;
+}
+
+.empty {
+  text-align: center;
+  color: #999;
+  padding: 16px 0;
+  font-size: 0.9rem;
+}
+
+.contact-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #89bbee;
+  border: 1px solid #040404;
+  border-radius: 8px;
+  padding: 12px 14px;
+  margin-bottom: 10px;
+  transition: box-shadow 0.2s;
+}
+
+.contact-card:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.contact-info {
+  flex: 1;
+}
+
+.contact-info .ci-name {
+  font-weight: 1600;
+  font-size: 1rem;
+  f
+}
+
+.contact-info .ci-email,
+.contact-info .ci-phone {
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 2px;
+}
+
+.contact-actions {
+  display: flex;
+  gap: 6px;
+}
+
+.contact-actions button {
+  padding: 5px 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.82rem;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.contact-actions button:hover {
+  opacity: 0.86;
+}
+
+.btn-edit {
+  background: #eaeaea;
+  color: #0e0a0a;
+}
+
+.btn-delete {
+  background: #e74c3c;
+  color: #fff;
+}
